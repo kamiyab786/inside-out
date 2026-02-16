@@ -101,19 +101,19 @@ const Context = forwardRef(function Context(props, ref) {
                         </div>
                         {/* Logo dots on orbit rings with labels */}
                         <div className="orbit-dot od-top">
-                            <Logo size={16} />
+                            <Logo size={20} />
                             <span className="od-label">Resilience</span>
                         </div>
                         <div className="orbit-dot od-right">
-                            <Logo size={16} />
+                            <Logo size={20} />
                             <span className="od-label">Confidence</span>
                         </div>
                         <div className="orbit-dot od-bottom">
-                            <Logo size={16} />
+                            <Logo size={20} />
                             <span className="od-label">Belonging</span>
                         </div>
                         <div className="orbit-dot od-left">
-                            <Logo size={16} />
+                            <Logo size={20} />
                             <span className="od-label">Clarity</span>
                         </div>
                     </div>

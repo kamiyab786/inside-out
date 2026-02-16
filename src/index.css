@@ -152,8 +152,8 @@ h6 {
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: var(--accent-3);
@@ -164,7 +164,7 @@ h6 {
 .section-label::before {
   content: '';
   width: 20px;
-  height: 1px;
+  height: 1.5px;
   background: var(--accent-3);
   border-radius: 2px
 }
@@ -1263,21 +1263,6 @@ h6 {
   -webkit-text-fill-color: transparent;
 }
 
-/* iOS Glass Theme for Context label */
-.context .section-label {
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 4px;
-  color: var(--accent-3);
-  padding: .5rem 1.2rem;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, .45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, .5);
-  box-shadow: 0 2px 12px rgba(53, 42, 68, .06);
-}
-
 .context-text p {
   color: var(--accent-6);
   font-size: 15px;
@@ -1598,44 +1583,36 @@ h6 {
 }
 
 .orbit-dot:hover {
-  transform: scale(1.15)
+  transform: scale(1.4)
 }
 
 .orbit-dot svg {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .od-label {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--accent-3);
   white-space: nowrap;
 }
 
 .od-top {
-  top: -4%;
-  left: 50%;
-  transform: translateX(-50%)
+  top: -4%
 }
 
 .od-right {
-  right: -8%;
-  top: 50%;
-  transform: translateY(-50%)
+  right: -8%
 }
 
 .od-bottom {
-  bottom: -4%;
-  left: 50%;
-  transform: translateX(-50%)
+  bottom: -4%
 }
 
 .od-left {
-  left: -8%;
-  top: 50%;
-  transform: translateY(-50%)
+  left: -8%
 }
 
 /* Adjust label positions per dot */
@@ -1688,10 +1665,6 @@ h6 {
 }
 
 /* ===== TALKS ===== */
-.talks {
-  background: var(--accent-4)
-}
-
 .talks-header {
   margin-bottom: 3rem
 }
@@ -1704,10 +1677,14 @@ h6 {
   gap: 1.5rem
 }
 
+.talks-title {
+  margin-bottom: 0px !important;
+}
+
 .talks-subtitle {
   font-family: var(--font-serif);
   font-size: 1.35rem;
-  color: var(--text-muted);
+  color: var(--accent-3);
   font-style: italic
 }
 
@@ -1968,7 +1945,7 @@ h6 {
 /* ===== OUTCOMES ===== */
 .outcomes {
   background: var(--accent-3);
-  color: var(--accent-1)
+  color: var(--accent-1);
 }
 
 .outcomes .section-label {
@@ -2066,7 +2043,8 @@ h6 {
 
 /* ===== METHOD ===== */
 .method {
-  background: var(--accent-4)
+  background: var(--accent-2);
+  padding: 10px;
 }
 
 .method-inner {
@@ -2114,7 +2092,8 @@ h6 {
 
 /* ===== ADVISORY ===== */
 .advisory {
-  background: var(--accent-2)
+  background: var(--accent-2);
+  padding-top: 0px;
 }
 
 .advisory-grid {

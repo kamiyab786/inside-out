@@ -14,8 +14,8 @@ const Talks = forwardRef(function Talks({ expandedTalk, setExpandedTalk }, ref) 
                 <div className="talks-header reveal">
                     <div className="talks-header-row">
                         <div>
-                            <span className="section-label">— Prevention First</span>
-                            <h2 className="section-title">Our <span className="accent">Talks</span></h2>
+                            <span className="section-label">Prevention First</span>
+                            <h2 className="section-title talks-title">Our <span className="accent">Talks</span></h2>
                         </div>
                         <p className="talks-subtitle">Choose Your <span className="accent-audience">Audience</span></p>
                     </div>
