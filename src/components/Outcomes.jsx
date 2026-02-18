@@ -70,10 +70,10 @@ const icons = {
 
 const outcomes = [
     { icon: icons.awareness, title: 'Self-Awareness', desc: 'Students develop the ability to recognise their emotional patterns and understand what drives their behaviour.' },
-    { icon: icons.resilience, title: 'Emotional Resilience', desc: 'Tools to manage anxiety, frustration and pressure — without shutting down or lashing out.' },
+    { icon: icons.resilience, title: 'Emotional Resilience', desc: 'Tools to manage anxiety, frustration and pressure - without shutting down or lashing out.' },
     { icon: icons.communication, title: 'Better Communication', desc: 'The confidence to express themselves honestly and listen with empathy in their relationships.' },
-    { icon: icons.decision, title: 'Informed Decision-Making', desc: 'They learn to pause, reflect, and make choices aligned with their values — not just peer pressure.' },
-    { icon: icons.purpose, title: 'Sense of Purpose', desc: "A clearer understanding of who they are and what they want — beyond social validation." },
+    { icon: icons.decision, title: 'Informed Decision-Making', desc: 'They learn to pause, reflect, and make choices aligned with their values - not just peer pressure.' },
+    { icon: icons.purpose, title: 'Sense of Purpose', desc: "A clearer understanding of who they are and what they want - beyond social validation." },
     { icon: icons.relationships, title: 'Stronger Relationships', desc: 'Skills to navigate friendships, family dynamics and romantic relationships in a healthier way.' }
 ]
 
@@ -81,19 +81,21 @@ const Outcomes = forwardRef(function Outcomes(props, ref) {
     return (
         <section className="section outcomes" id="outcomes" ref={ref}>
             <div className="container">
-                <div style={{ textAlign: 'center', maxWidth: 580, margin: '0 auto 4rem' }}>
-                    <span className="section-label reveal" style={{ justifyContent: 'center' }}>What Students Take Away</span>
-                    <h2 className="section-title reveal">Real <span className="accent">Outcomes</span></h2>
-                    <p className="section-sub reveal" style={{ margin: '0 auto' }}>Lasting skills that extend far beyond the classroom into every area of life.</p>
-                </div>
-                <div className="grid-3">
-                    {outcomes.map((o, i) => (
-                        <div key={i} className={`outcome-card reveal ${i % 3 === 1 ? 'reveal-delay-1' : i % 3 === 2 ? 'reveal-delay-2' : ''}`}>
-                            <div className="outcome-icon">{o.icon}</div>
-                            <h4>{o.title}</h4>
-                            <p>{o.desc}</p>
-                        </div>
-                    ))}
+                <div className="outcomes-inner-container">
+                    <div className='section-header'>
+                        <span className="section-label reveal">What Students Take Away</span>
+                        <h2 className="section-title reveal">Real <span className="accent">Outcomes</span></h2>
+                        <p className="section-sub reveal">Lasting skills that extend far beyond the classroom into every area of life.</p>
+                    </div>
+                    <div className="grid-3">
+                        {outcomes.map((o, i) => (
+                            <div key={i} className={`outcome-card reveal ${i % 3 === 1 ? 'reveal-delay-1' : i % 3 === 2 ? 'reveal-delay-2' : ''}`}>
+                                <div className="outcome-icon">{o.icon}</div>
+                                <h4>{o.title}</h4>
+                                <p>{o.desc}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

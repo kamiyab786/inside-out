@@ -13,9 +13,27 @@ const testimonials = [
 
 const Testimonials = forwardRef(function Testimonials(props, ref) {
     const [index, setIndex] = useState(0)
+    const [itemsPerPage, setItemsPerPage] = useState(3) // Default to 3
     const [paused, setPaused] = useState(false)
 
-    const maxIndex = testimonials.length - 3
+    // Handle responsive itemsPerPage
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setItemsPerPage(1)
+            } else {
+                setItemsPerPage(3)
+            }
+        }
+
+        // Initial check
+        handleResize()
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    const maxIndex = testimonials.length - itemsPerPage
 
     const next = useCallback(() => {
         setIndex(prev => prev >= maxIndex ? 0 : prev + 1)
@@ -50,7 +68,7 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
                     <div className="carousel-viewport">
                         <div
                             className="carousel-track"
-                            style={{ transform: `translateX(-${index * (100 / 3)}%)` }}
+                            style={{ transform: `translateX(-${index * (100 / itemsPerPage)}%)` }}
                         >
                             {testimonials.map((t, i) => (
                                 <div key={i} className="testimonial-card">

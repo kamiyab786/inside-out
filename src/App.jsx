@@ -32,7 +32,7 @@ export default function App() {
     const [scrolled, setScrolled] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false)
 
-    const [expandedTalk, setExpandedTalk] = useState(null)
+    const [expandedTalk, setExpandedTalk] = useState([])
     const [showTop, setShowTop] = useState(false)
 
     // Reveal refs for each section

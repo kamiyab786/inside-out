@@ -5,7 +5,13 @@ import Logo from './Logo'
 const Talks = forwardRef(function Talks({ expandedTalk, setExpandedTalk }, ref) {
 
     const handleToggle = (index) => {
-        setExpandedTalk(expandedTalk === index ? null : index)
+        setExpandedTalk(prev => {
+            if (prev.includes(index)) {
+                return prev.filter(i => i !== index)
+            } else {
+                return [...prev, index]
+            }
+        })
     }
 
     return (
@@ -20,9 +26,9 @@ const Talks = forwardRef(function Talks({ expandedTalk, setExpandedTalk }, ref) 
                         <p className="talks-subtitle">Choose Your <span className="accent-audience">Audience</span></p>
                     </div>
                 </div>
-                <div className="grid-2">
+                <div className="grid-2" style={{ alignItems: 'start' }}>
                     {/* Talk 1 — NO reveal class to avoid disappearing on re-render */}
-                    <div className={`talk-card ${expandedTalk === 0 ? 'expanded' : ''}`}>
+                    <div className={`talk-card ${expandedTalk.includes(0) ? 'expanded' : ''}`}>
                         <div className="talk-card-img">
                             <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" alt="Students in classroom" loading="lazy" width={600} height={400} />
                             <div className="card-overlay" />
@@ -54,13 +60,13 @@ const Talks = forwardRef(function Talks({ expandedTalk, setExpandedTalk }, ref) 
                             <p className="outcome">"Students leave with a real shift in how they understand themselves and the choices they make."</p>
                         </div>
                         <div className="talk-card-footer" onClick={() => handleToggle(0)}>
-                            <span>{expandedTalk === 0 ? 'HIDE OUTCOMES' : 'VIEW OUTCOMES'}</span>
+                            <span>{expandedTalk.includes(0) ? 'HIDE OUTCOMES' : 'VIEW OUTCOMES'}</span>
                             <div className="talk-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg></div>
                         </div>
                     </div>
 
                     {/* Talk 2 — NO reveal class to avoid disappearing on re-render */}
-                    <div className={`talk-card ${expandedTalk === 1 ? 'expanded' : ''}`}>
+                    <div className={`talk-card ${expandedTalk.includes(1) ? 'expanded' : ''}`}>
                         <div className="talk-card-img">
                             <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=80" alt="Community group discussion" loading="lazy" width={600} height={400} />
                             <div className="card-overlay" />
@@ -92,7 +98,7 @@ const Talks = forwardRef(function Talks({ expandedTalk, setExpandedTalk }, ref) 
                             <p className="outcome">"Parents gain practical tools to strengthen the bridge between themselves and the young people they care for."</p>
                         </div>
                         <div className="talk-card-footer" onClick={() => handleToggle(1)}>
-                            <span>{expandedTalk === 1 ? 'HIDE OUTCOMES' : 'VIEW OUTCOMES'}</span>
+                            <span>{expandedTalk.includes(1) ? 'HIDE OUTCOMES' : 'VIEW OUTCOMES'}</span>
                             <div className="talk-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg></div>
                         </div>
                     </div>
