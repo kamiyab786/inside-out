@@ -9,7 +9,7 @@ const Advisory = forwardRef(function Advisory({ scrollTo }, ref) {
                 <div className="advisory-grid">
                     <div className="reveal">
                         <span className="section-label">Advisory & Strategy</span>
-                        <h2 className="section-title">Advisory for Organizations and <span className="accent">Government</span></h2>
+                        <h2 className="section-title">Advisory for <span className="accent">Organizations</span> and <span className="accent">Government</span></h2>
                         <p className="advisory-body">
                             I also work as a thought partner for organizations and government teams focused on prevention. This is not enforcement work. It's a prevention lens: understanding where problems start, what drives behavior, and how to build systems and messaging that support better decisions.
                         </p>
@@ -28,7 +28,7 @@ const Advisory = forwardRef(function Advisory({ scrollTo }, ref) {
                                     'Cultural insight and Punjabi-language support where helpful',
                                     'Practical recommendations grounded in lived experience and accountability'
                                 ].map((text, i) => (
-                                    <li key={i}><span className="advisory-bullet"><Logo size={8} /></span><span>{text}</span></li>
+                                    <li key={i}><span className="advisory-bullet"><Logo size={14} /></span><span>{text}</span></li>
                                 ))}
                             </ul>
                         </div>

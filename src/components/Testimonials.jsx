@@ -52,10 +52,10 @@ const Testimonials = forwardRef(function Testimonials(props, ref) {
     return (
         <section className="section testimonials" ref={ref}>
             <div className="container">
-                <div style={{ textAlign: 'center', maxWidth: 580, margin: '0 auto 3rem' }}>
+                <div style={{ textAlign: 'center', maxWidth: 580, margin: '0 auto 2rem' }}>
                     <span className="section-label reveal" style={{ justifyContent: 'center' }}>Feedback</span>
                     <h2 className="section-title reveal">Hear from <span className="accent-italic">our</span> <span className="accent">Clients</span></h2>
-                    <p className="section-sub reveal" style={{ margin: '0 auto', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '11px', fontWeight: 500 }}>Stories of Transformation</p>
+                    <p className="section-sub reveal" style={{ margin: '0 auto', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '12px', fontWeight: 500 }}>Stories of Transformation</p>
                 </div>
                 <div
                     className="testimonial-carousel"

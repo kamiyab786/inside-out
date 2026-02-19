@@ -31,11 +31,11 @@ const About = forwardRef(function About({ scrollTo }, ref) {
                     {/* Left: Photo card with Logo badge, quote & founder name INSIDE */}
                     <div className="about-photo-col reveal">
                         <div className="about-card">
-                            <div className="about-logo-badge"><Logo size={18} /></div>
+                            <div className="about-logo-badge"><Logo size={24} /></div>
                             <div className="about-img">
                                 <img
-                                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80"
-                                    alt="Mindy Bhandher — Founder of Inside Out Mindset"
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+                                    alt="Mindy Bhandher - Founder of Inside Out Mindset"
                                     loading="lazy"
                                     width={700}
                                     height={875}
@@ -76,8 +76,8 @@ const About = forwardRef(function About({ scrollTo }, ref) {
                         </div>
 
                         <div className="about-actions">
-                            <a href="#booking" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('booking') }}>
-                                Read more about our approach <ArrowRight size={14} />
+                            <a href="#booking" className="link-arrow" onClick={(e) => { e.preventDefault(); scrollTo('booking') }}>
+                                Know more about our approach <ArrowRight size={14} />
                             </a>
                             <div className="about-punjabi"><span className="dot" />Punjabi-Language Parent Sessions Available</div>
                         </div>

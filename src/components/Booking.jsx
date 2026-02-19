@@ -39,35 +39,41 @@ const Booking = forwardRef(function Booking(props, ref) {
                     <div className="reveal">
                         <span className="section-label">Get Started</span>
                         <h2 className="section-title">Book a <span className="accent">Talk</span></h2>
-                        <p style={{ color: 'var(--slate-500)', lineHeight: 1.8, fontWeight: 300, marginBottom: '2.5rem', fontSize: '.95rem' }}>
-                            Whether you're a school, community group, or organisation — fill in the form and we'll get back to you to arrange an initial conversation about your needs.
+                        <p style={{ color: 'var(--accent-3)', lineHeight: 1.8, fontWeight: 300, marginBottom: '2.5rem', fontSize: '.95rem' }}>
+                            Whether you're a school, community group, or organisation - fill in the form and we'll get back to you to arrange an initial conversation about your needs.
                         </p>
 
                         <div className="contact-info-grid">
-                            <div className="contact-box">
-                                <div className="contact-box-bg" />
-                                <div className="contact-icon"><MapPin size={20} /></div>
-                                <div className="contact-content">
-                                    <h4>Location</h4>
-                                    <p>Surrey, BC & Lower Mainland</p>
+                            <a href="https://maps.google.com/?q=Surrey,BC" target="_blank" rel="noreferrer">
+                                <div className="contact-box">
+                                    <div className="contact-box-bg" />
+                                    <div className="contact-icon"><MapPin size={20} /></div>
+                                    <div className="contact-content">
+                                        <h4>Location</h4>
+                                        <p>Surrey, BC & Lower Mainland</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="contact-box">
-                                <div className="contact-box-bg" />
-                                <div className="contact-icon"><Phone size={20} /></div>
-                                <div className="contact-content">
-                                    <h4>Phone</h4>
-                                    <p>(604) 555-0123</p>
+                            </a>
+                            <a href="tel:(604) 555-0123" target="_blank" rel="noreferrer">
+                                <div className="contact-box">
+                                    <div className="contact-box-bg" />
+                                    <div className="contact-icon"><Phone size={20} /></div>
+                                    <div className="contact-content">
+                                        <h4>Phone</h4>
+                                        <p>(604) 555-0123</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="contact-box">
-                                <div className="contact-box-bg" />
-                                <div className="contact-icon"><Mail size={20} /></div>
-                                <div className="contact-content">
-                                    <h4>Email</h4>
-                                    <p>mindy@insideoutmindset.com</p>
+                            </a>
+                            <a href="mailto:mindy@insideoutmindset.com" target="_blank" rel="noreferrer">
+                                <div className="contact-box">
+                                    <div className="contact-box-bg" />
+                                    <div className="contact-icon"><Mail size={20} /></div>
+                                    <div className="contact-content">
+                                        <h4>Email</h4>
+                                        <p>mindy@insideoutmindset.com</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <a href="https://maps.google.com/?q=Surrey,BC" target="_blank" rel="noreferrer" className="btn-direction">
                                 Get direction <div className="btn-direction-icon"><ArrowRight size={16} /></div>
                             </a>
